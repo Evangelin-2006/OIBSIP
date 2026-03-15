@@ -1,0 +1,445 @@
+/* ===== PAGE ===== */
+.dashboard {
+  min-height: 100vh;
+  padding: 20px;
+  background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.logo {
+  margin: 0;
+  font-size: 28px;
+  color: #ff5e62;
+  font-weight: bold;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.user-greeting {
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ===== BUTTONS ===== */
+.orders-btn, .admin-btn {
+  background: #ff5e62;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+}
+
+.orders-btn:hover, .admin-btn:hover {
+  opacity: 0.9;
+}
+
+.custom-btn {
+  background: #ff5e62;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.custom-btn:hover {
+  opacity: 0.9;
+}
+
+.logout-btn {
+  background: #e10808;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== TOP ACTIONS / CATEGORIES ===== */
+.top-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.top-actions button {
+  padding: 10px 16px;
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.top-actions button:hover {
+  border-color: #ff5e62;
+}
+
+.top-actions button.active {
+  background: #ff5e62;
+  color: white;
+  border-color: #ff5e62;
+}
+
+/* ===== PIZZA GRID ===== */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ===== PIZZA CARD ===== */
+.pizza-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: none;
+}
+
+.pizza-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.pizza-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pizza-info {
+  padding: 16px;
+}
+
+.pizza-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #ff5e62;
+  color: white;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff5e62;
+}
+
+.order-btn-card {
+  width: 100%;
+  padding: 10px;
+  background: #ff5e62;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.order-btn-card:hover {
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  .pizza-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .header-buttons {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .pizza-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .header {
+    gap: 10px;
+    padding: 12px 15px;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .top-actions {
+    flex-direction: column;
+  }
+
+  .top-actions button {
+    width: 100%;
+  }
+
+  .pizza-card img {
+    height: 150px;
+  }
+
+  .pizza-info h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 8px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .pizza-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-buttons {
+    font-size: 12px;
+  }
+
+  .orders-btn, .admin-btn, .custom-btn, .logout-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .pizza-info {
+    padding: 12px;
+  }
+}
+
+
+/* ===== CATEGORIES ===== */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 30px;
+}
+
+/* visible by default */
+.categories button {
+  padding: 8px 16px;
+  border-radius: 20px;
+
+  background: #ffffff;
+  border: 2px solid #ff5e62;   /* stronger border */
+
+  color: #ff5e62;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* soft shadow */
+}
+
+/* hover */
+.categories button:hover {
+  background: #ff5e62;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* optional: active state (selected category) */
+.categories button.active {
+  background: #ff5e62;
+  color: white;
+}
+
+
+
+/* ===== GRID ===== */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+
+/* ===== CARD ===== */
+.pizza-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.pizza-card:hover {
+  transform: translateY(-3px);
+}
+
+.pizza-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.order-btn {
+  margin-top: 8px;
+  background: #ff5e62;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* header right side buttons */
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* logout button */
+.logout-btn {
+  background: #e10808;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  opacity: 0.85;
+}
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  margin: 0;
+}
+
+
+/* ===== TOP ACTION ROW (categories + customize) ===== */
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+
+/* ===== LOGOUT BUTTON (better red) ===== */
+.logout-btn {
+  background: #ff5e62; /* bootstrap red – professional */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #b02a37;
+}
+
+
+/* ===== CUSTOMIZE BUTTON ===== */
+.custom-btn {
+  background: #ff5e62;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.custom-btn:hover {
+  opacity: 0.9;
+}

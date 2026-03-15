@@ -1,0 +1,155 @@
+/* =============================================
+   PIZZA BUILDER PAGE STYLES
+   ============================================= */
+
+/* Main Container */
+.pizza-builder-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.6s ease-out;
+  font-family: Arial, sans-serif;
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title */
+.pizza-builder-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff5e62;
+}
+
+/* Section Styling */
+.pizza-section {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.pizza-builder-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Select Dropdowns */
+.pizza-builder-container select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  background-color: white;
+}
+
+.pizza-builder-container select:focus {
+  outline: none;
+  border-color: #ff5e62;
+}
+
+.pizza-builder-container select:hover {
+  border-color: #ff5e62;
+}
+
+/* Veggie Options Container */
+.veggie-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Veggie Checkbox Labels */
+.veggie-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.veggie-options input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #ff5e62;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff5e62;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.checkout-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .pizza-builder-container {
+    margin: 20px auto;
+    padding: 25px;
+  }
+
+  .pizza-builder-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .pizza-section {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+  }
+
+  .veggie-options {
+    gap: 8px;
+  }
+
+  .veggie-options label {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pizza-builder-container {
+    padding: 20px;
+  }
+
+  .veggie-options {
+    flex-direction: column;
+  }
+
+  .veggie-options label {
+    width: 100%;
+  }
+}

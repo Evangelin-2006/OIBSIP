@@ -1,0 +1,151 @@
+.orders-page {
+  padding: 30px;
+  background: #f8f9fb;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.orders-header h2 {
+  color: #333;
+}
+
+.orders-header button {
+  background: #ff6b00;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.orders-header button:hover {
+  background: #ff5500;
+}
+
+/* Grid */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.order-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Top section */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.order-id {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Status badges */
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Status colors */
+.status.received {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.kitchen {
+  background: #ffe082;
+  color: #ef6c00;
+}
+
+.status.delivery {
+  background: #90caf9;
+  color: #0d47a1;
+}
+
+.status.completed {
+  background: #a5d6a7;
+  color: #1b5e20;
+}
+
+.status.cancelled {
+  background: #ef9a9a;
+  color: #b71c1c;
+}
+
+/* Items list */
+.items {
+  margin: 12px 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Bottom section */
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Price */
+.price {
+  font-weight: bold;
+  color: #ff6b00;
+  font-size: 16px;
+}
+
+/* Cancel button */
+.cancel-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.cancel-btn:hover {
+  background: #c62828;
+}
+
+/* Empty orders */
+.empty {
+  text-align: center;
+  margin-top: 80px;
+  color: #777;
+  font-size: 18px;
+}

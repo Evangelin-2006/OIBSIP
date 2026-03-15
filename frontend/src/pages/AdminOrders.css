@@ -1,0 +1,79 @@
+/* ===== Card Header ===== */
+.card-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+/* ===== Status Badge ===== */
+.status-badge{
+  padding:5px 12px;
+  border-radius:20px;
+  color:white;
+  font-size:12px;
+  font-weight:600;
+}
+
+/* ===== Card Content ===== */
+.card-content p{
+  font-size:14px;
+  margin:4px 0;
+}
+
+/* ===== Items ===== */
+.items-section{
+  margin-top:10px;
+}
+
+.item-row{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  padding:3px 0;
+  border-bottom:1px dashed #eee;
+}
+
+/* ===== Total ===== */
+.total-section{
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+  font-size:15px;
+}
+
+.total-price{
+  font-weight:bold;
+  color:#ff6b00;
+}
+
+/* ===== Actions ===== */
+.card-actions{
+  margin-top:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.action-btn{
+  background:#ff6b00;
+  color:white;
+  border:none;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:13px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.action-btn:hover{
+  background:#e65c00;
+  transform:translateY(-1px);
+}
+
+/* ===== Loading ===== */
+.loading{
+  text-align:center;
+  margin-top:40px;
+  font-size:18px;
+}
